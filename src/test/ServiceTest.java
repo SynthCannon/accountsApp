@@ -1,11 +1,11 @@
-package accountspkgTest;
+package test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import accountspkg.Account;
-import accountspkg.Service;
+import accounts.Account;
+import service.Service;
 
 public class ServiceTest {
 

@@ -1,4 +1,4 @@
-package accountspkg;
+package accounts;
 
 public class Account {
 	/////////////////////////////// Attributes ///////////////////////////////
@@ -6,9 +6,9 @@ public class Account {
 
 	/////////////////////////////// Constructor ///////////////////////////////
 	public Account(String cFirstName, String cLastName, String cAccountNum) {
-		this.setFirstName(cFirstName);
-		this.setLastName(cLastName);
-		this.setAccountNum(cAccountNum);
+		this.firstName = cFirstName;
+		this.lastName = cLastName;
+		this.accountNum = cAccountNum;
 	}
 	
 	

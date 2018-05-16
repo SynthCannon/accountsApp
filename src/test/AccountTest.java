@@ -1,10 +1,10 @@
-package accountspkgTest;
+package test;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import accountspkg.Account;
+import accounts.Account;
 
 public class AccountTest {
 
@@ -14,7 +14,8 @@ public class AccountTest {
 		System.out.println("testing first name getter and setter");
 		
 		Account acc = new Account("nn","mm","22");
-		assertEquals("first name getter not working",acc.getFirstName(),"nn");
+		acc.setFirstName("j");
+		assertEquals("first name getter not working",acc.getFirstName(),"j");
 		
 	}
 	
@@ -23,7 +24,8 @@ public class AccountTest {
 		System.out.println("testing last name getter and setter");
 		
 		Account acc = new Account("nn","mm","22");
-		assertEquals("last name getter not working",acc.getLastName(),"mm");
+		acc.setLastName("j");
+		assertEquals("last name getter not working",acc.getLastName(),"j");
 	}
 	
 	@Test
@@ -31,7 +33,8 @@ public class AccountTest {
 		System.out.println("testing account number getter and setter");
 		
 		Account acc = new Account("nn","mm","22");
-		assertEquals("account number getter not working",acc.getAccountNum(),"22");
+		acc.setAccountNum("j");
+		assertEquals("account number getter not working",acc.getAccountNum(),"j");
 	}
 	
 	@Test

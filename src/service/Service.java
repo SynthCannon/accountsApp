@@ -1,11 +1,13 @@
-package accountspkg;
+package service;
 
 import java.util.HashMap;
+
+import accounts.Account;
 
 
 public class Service {
 	/////////////////////////////// Attributes ///////////////////////////////
-	private HashMap<String,Account> accounts = new HashMap<String,Account>();
+	private HashMap<String,Account> accounts = new HashMap<>();
 	
 	
 	/////////////////////////////// Methods ///////////////////////////////
@@ -22,11 +24,12 @@ public class Service {
 	}
 	
 	public String toString() {
-		
 		String rVal = "";
+		
 		for(String key : accounts.keySet()) {
 			rVal+=accounts.get(key).toString() + "\n";
 		}
+		
 		return rVal;
 	}
 	
