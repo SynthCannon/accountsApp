@@ -45,6 +45,18 @@ public class Service {
 		this.addAccount(foo);
 		this.addAccount(foo2);
 		this.addAccount(foo3);
+		this.addAccount(foo4);
+	}
+	
+	public int searchNumFirstName (String name){
+		int count = 0;
+		for(String key : accounts.keySet()) {
+			if(accounts.get(key).getFirstName().equals(name))
+				count++;
+		}
+		
+		System.out.println("Number of " + name + "'s is " + count);
+		return count;
 	}
 	
 }
