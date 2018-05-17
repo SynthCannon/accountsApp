@@ -2,13 +2,15 @@ package service;
 
 import java.util.HashMap;
 
-import accounts.Account;
+import account.Account;
 
 
 public class Service {
 	/////////////////////////////// Attributes ///////////////////////////////
-	private HashMap<String,Account> accounts = new HashMap<>();
+	private HashMap<String,Account> accounts = new HashMap<String,Account>();
+
 	
+
 	
 	/////////////////////////////// Methods ///////////////////////////////
 	public void addAccount(Account cAccount) {
@@ -27,7 +29,7 @@ public class Service {
 		String rVal = "";
 		
 		for(String key : accounts.keySet()) {
-			rVal+=accounts.get(key).toString() + "\n";
+			rVal+=accounts.get(key).toString() + ". ";
 		}
 		
 		return rVal;
@@ -37,11 +39,12 @@ public class Service {
 	public void addDemoAccounts() {
 		Account foo = new Account("Roland","Walet","1"),
 				foo2 = new Account("John","Gordon","2"),
-				foo3 = new Account("Jeremy","Kyle","3");
+				foo3 = new Account("Jeremy","Kyle","3"),
+				foo4 = new Account("Roland","Wallet","4");
 		
-		addAccount(foo);
-		addAccount(foo2);
-		addAccount(foo3);
+		this.addAccount(foo);
+		this.addAccount(foo2);
+		this.addAccount(foo3);
 	}
 	
 }
