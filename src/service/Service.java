@@ -1,5 +1,7 @@
 package service;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 import account.Account;
@@ -50,10 +52,10 @@ public class Service {
 	
 	public int searchNumFirstName (String name){
 		int count = 0;
-		for(String key : accounts.keySet()) {
-			if(accounts.get(key).getFirstName().equals(name))
-				count++;
-		}
+
+		count = (int)accounts.entrySet().stream().filter( 
+				collectionItem -> collectionItem.getValue().getFirstName().equals(name)
+				).count();
 		
 		System.out.println("Number of " + name + "'s is " + count);
 		return count;
