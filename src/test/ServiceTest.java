@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import accounts.Account;
+import account.Account;
 import service.Service;
 
 public class ServiceTest {

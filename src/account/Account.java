@@ -1,4 +1,4 @@
-package accounts;
+package account;
 
 public class Account {
 	/////////////////////////////// Attributes ///////////////////////////////
@@ -9,6 +9,10 @@ public class Account {
 		this.firstName = cFirstName;
 		this.lastName = cLastName;
 		this.accountNum = cAccountNum;
+	}
+	
+	public Account() {
+		
 	}
 	
 	
