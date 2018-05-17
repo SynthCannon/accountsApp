@@ -38,10 +38,20 @@ public class ServiceTest {
 		service.addDemoAccounts();
 		
 		assertEquals("toString for service not working",
-				"Roland Walet, Account num: 1\n"
-				+ "John Gordon, Account num: 2\n"
-				+ "Jeremy Kyle, Account num: 3\n", 
+				"Roland Walet, Account num: 1. "
+				+ "John Gordon, Account num: 2. "
+				+ "Jeremy Kyle, Account num: 3. "
+				+ "Roland Wallet, Account num: 4. ", 
 				service.toString());
+	}
+	
+	@Test
+	public void testNumOfFirstNames() {
+		System.out.println("Testing num of Roland accounts in demo data");
+		Service service = new Service();
+		service.addDemoAccounts();
+		int actualResult = service.searchNumFirstName("Roland");
+		assertEquals("number of Rolands not correct", actualResult, 2);
 	}
 	
 }
